@@ -20,9 +20,6 @@ jobs:
       with:
         java-version: 1.8
     
-    - name: Download procyon-decompiler
-      run: curl https://bitbucket.org/mstrobel/procyon/downloads/procyon-decompiler-0.5.36.jar -o procyon-decompiler.jar
-    
     - name: Run procyon-decompiler
-      run: java -jar ./procyon-decompiler.jar
+      run: java -jar ./tools/procyon-decompiler-0.5.36.jar
       
