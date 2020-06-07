@@ -1,10 +1,5 @@
 {
-  "game_version": "1.12.2",
-  "mod_count": 1000,
-  "source_lang_code": "en_us",
-  "target_lang_code": "zh_cn",
-  "lang_extension": "lang",
-  "mod_blacklist": [//即将弃用
+  "mod_blacklist": [
     "dungeon-tactics",
     "minecraft-comes-alive-mca",
     "mike-dongles",

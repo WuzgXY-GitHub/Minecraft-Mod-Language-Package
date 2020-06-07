@@ -1,6 +1,18 @@
 [
-    {
-        "gameVersion":"1.12.2",
-        "path":"projects/1.12.2"
-    }
+  {
+    "gameVersion": "1.12.2",
+    "path": "projects/1.12.2",
+    "source_language": "en_us",
+    "targetLanguages": ["zh_cn"],
+    "langType":"lang",
+    "trackedModCount":1000
+  },
+  {
+    "gameVersion": "1.14.4",
+    "path": null,
+    "source_language": "en_us",
+    "targetLanguages": ["zh_cn"],
+    "langType":"json",
+    "trackedModCount":1000
+  }
 ]
