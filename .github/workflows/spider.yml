@@ -1,10 +1,10 @@
 name: Spider
 
 on:
-  #push:
-  #  branches: [ 1.12.2 ]
-  schedule:
-   - cron: "0 */3 * * *"
+  push:
+    branches: [ master ]
+  #schedule:
+  #- cron: "0 */3 * * *"
 
 jobs:
   build:
@@ -12,26 +12,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.100-preview.3
+        fetch-depth: 1
     
     - name: Setup Java JDK
       uses: actions/setup-java@v1.3.0
       with:
         java-version: 1.8
-    - name: Download GitHub Release
-      uses: Legion2/download-release-action@v2.1.0
-      with:
-        repository: leibnitz27/cfr
-        tag: '0.150'
-        file: cfr-0.150.jar
-
-    # Runs a single command using the runners shell
-    - name: Run spider
-      run: ./spider.ps1
-      shell: pwsh
-      env:
-        token: ${{ Secrets.my_token }}
+    
+    - name: Download procyon-decompiler
+      run: wget https://bitbucket.org/mstrobel/procyon/downloads/procyon-decompiler-0.5.36.jar -o ./procyon-decompiler.jar
+    
+    - name: Run procyon-decompiler
+      run: java -jar procyon-decompiler.jar
       
