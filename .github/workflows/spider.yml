@@ -21,7 +21,7 @@ jobs:
         java-version: 1.8
     
     - name: Download procyon-decompiler
-      run: wget https://bitbucket.org/mstrobel/procyon/downloads/procyon-decompiler-0.5.36.jar --output-file ./procyon-decompiler.jar
+      run: wget https://bitbucket.org/mstrobel/procyon/downloads/procyon-decompiler-0.5.36.jar --output-file=./procyon-decompiler.jar
     
     - name: Run procyon-decompiler
       run: java -jar ./procyon-decompiler.jar
