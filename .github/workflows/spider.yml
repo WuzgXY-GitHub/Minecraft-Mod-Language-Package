@@ -22,6 +22,7 @@ jobs:
     
     - name: Run spider
       run: ./scripts/spider.ps1
+      shell: pwsh
       env:
-        token: ${{ Secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
       
