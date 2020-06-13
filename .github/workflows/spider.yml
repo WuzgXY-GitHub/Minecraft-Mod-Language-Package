@@ -21,11 +21,13 @@ jobs:
         java-version: 1.8
     
     - name: Download cfr
-      uses: Legion2/download-release-action@v2.1.0
+      uses: i3h/download-release-asset@v1.0.0
       with:
-        repository: leibnitz27/cfr
+        owner: leibnitz27
+        repo: cfr
         tag: '0.150'
         file: cfr-0.150.jar
+    
     
     - name: Run spider
       run: ./scripts/spider.ps1
